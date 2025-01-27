@@ -1,12 +1,12 @@
 import allure
 import pytest
 from selenium import webdriver
-from pages.base_page import BaseMethod
 from pages.order_page import OrderPage
+from data.base_page_data import BasePageData
 from data.order_page_data import OrderPageData
-from locators.order_page_locators import OrderPageLocator
 
 
+# Проверка заказа самоката
 class TestOrderPage:
     driver = None
 
@@ -20,7 +20,7 @@ class TestOrderPage:
         cls.driver.maximize_window()
 
         # открытие страницы тестового стенда
-        cls.driver.get(OrderPageData.BASE_URL)
+        cls.driver.get(BasePageData.BASE_URL)
 
     @pytest.mark.parametrize(
         'first_name_text, last_name_text, address_text, station_metro_text, phone_number, delivery_date, comment_courier_text', [
@@ -36,11 +36,11 @@ class TestOrderPage:
             [
                 OrderPageData.FIRST_NAME_TEXT_2,
                 OrderPageData.LAST_NAME_TEXT_2,
-                "",
+                OrderPageData.ADDRESS_TEXT_2,
                 OrderPageData.STATION_METRO_TEXT_2,
                 OrderPageData.PHONE_NUMBER_2,
                 OrderPageData.DELIVERY_DATE_2,
-                ""
+                OrderPageData.COMMENT_COURIER_TEXT_2
             ]
         ],
         ids = [
@@ -49,7 +49,7 @@ class TestOrderPage:
         ]
     )
 
-    @allure.description('Заказ самоката»')
+    @allure.title('Заказ самоката')
     def test_open_input_data_order_page(
             self,
             first_name_text,
@@ -63,13 +63,17 @@ class TestOrderPage:
         order_page = OrderPage(self.driver)
 
         # поиск кнопки «Заказать» и клик по ней
-        BaseMethod.click_element_by_xpath(self, OrderPageLocator.HIGH_BUTTON_ORDER)
+        order_page.click_order_button()
 
         # ввод данных в окне «Для кого самокат»
-        order_page.set_personal_info(first_name_text, last_name_text, address_text, station_metro_text, phone_number)
+        order_page.set_personal_info(
+            first_name_text, last_name_text, address_text, station_metro_text, phone_number
+        )
 
         # ввод данных в окне «Про аренду»
-        order_page.set_order_info(delivery_date, comment_courier_text)
+        order_page.set_order_info(
+            delivery_date, comment_courier_text
+        )
 
         # проверка оформления заказа
         order_page.check_order()

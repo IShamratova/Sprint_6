@@ -1,22 +1,19 @@
 class OrderPageData:
-    # страница тестового стенда
-    BASE_URL = 'https://qa-scooter.praktikum-services.ru/'
-
     # текст для ввода в поле «Имя»
     FIRST_NAME_TEXT_1 = 'Ирина'
-    FIRST_NAME_TEXT_2 = 'Оля'
+    FIRST_NAME_TEXT_2 = 'Вова'
 
     # текст для ввода в поле «Фамилия»
     LAST_NAME_TEXT_1 = 'Орешкина'
-    LAST_NAME_TEXT_2 = 'Ли'
+    LAST_NAME_TEXT_2 = 'Пупкин'
 
     # текст для ввода в поле «Адрес: куда привезти заказ»
-    ADDRESS_TEXT_1 = 'г. Москва, ул. Шолохова, д. 10'
-    # ADDRESS_TEXT_2 = 'г. Касимов, деревня Бочкари, д. 19'
+    ADDRESS_TEXT_1 = 'г. Москва, ул. Молодёжная'
+    ADDRESS_TEXT_2 = 'г. Москва, Кремль'
 
     # название станции метро «Парк культуры»
     STATION_METRO_TEXT_1 = 'Парк культуры'
-    STATION_METRO_TEXT_2 = 'ВДНХ'
+    STATION_METRO_TEXT_2 = 'Александровский сад'
 
     # текст для ввода в поле «Телефон: на него позвонит курьер»
     PHONE_NUMBER_1 = '+79261234567'
@@ -28,6 +25,7 @@ class OrderPageData:
 
     # текст для ввода в поле «Комментарий для курьера»
     COMMENT_COURIER_TEXT_1 = 'Привет.'
+    COMMENT_COURIER_TEXT_2 = 'Пока.'
 
     # текст кнопки «Отменить заказ»
     CANCEL_ORDER_TEXT = 'Отменить заказ'

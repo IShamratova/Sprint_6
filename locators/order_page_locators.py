@@ -1,6 +1,4 @@
 class OrderPageLocator:
-    # локатор верхней кнопки «Заказать»
-    HIGH_BUTTON_ORDER = './/button[(@class="Button_Button__ra12g" and text()= "Заказать")]'
 
     # локатор нижней кнопки «Заказать»
     LOWER_BUTTON_ORDER = './/button[(@class="Button_Button__ra12g Button_Middle__1CSJM" and text()="Заказать")]'
@@ -64,12 +62,6 @@ class OrderPageLocator:
 
     # локатор кнопки «Да» окна «Хотите оформить заказ?»
     BUTTON_ORDER_CANCEL = './/div[contains(@class, "Track_OrderInfo")]/button'
-
-    # локатор логотипа «Самокат»
-    LINK_SCOOTER = './/a[contains(@class, "Header_LogoScooter")]'
-
-    # локатор логотипа «Яндекс»
-    LINK_DZEN = './/a[contains(@class, "Header_LogoYandex")]'
 
 
 
