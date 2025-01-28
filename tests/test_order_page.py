@@ -1,13 +1,13 @@
 import allure
 import pytest
 from selenium import webdriver
-from pages.order_page import OrderPage
-from data.base_page_data import BasePageData
+from data.main_page_data import MainPageData
 from data.order_page_data import OrderPageData
+from pages.order_page import OrderPage
 
 
 # Проверка заказа самоката
-class TestOrderPage:
+class TestScooterOrder:
     driver = None
 
     @classmethod
@@ -20,7 +20,7 @@ class TestOrderPage:
         cls.driver.maximize_window()
 
         # открытие страницы тестового стенда
-        cls.driver.get(BasePageData.BASE_URL)
+        cls.driver.get(MainPageData.BASE_URL)
 
     @pytest.mark.parametrize(
         'first_name_text, last_name_text, address_text, station_metro_text, phone_number, delivery_date, comment_courier_text', [
@@ -50,7 +50,7 @@ class TestOrderPage:
     )
 
     @allure.title('Заказ самоката')
-    def test_open_input_data_order_page(
+    def test_scooter_order(
             self,
             first_name_text,
             last_name_text,

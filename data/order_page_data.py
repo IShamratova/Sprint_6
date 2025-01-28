@@ -9,7 +9,7 @@ class OrderPageData:
 
     # текст для ввода в поле «Адрес: куда привезти заказ»
     ADDRESS_TEXT_1 = 'г. Москва, ул. Молодёжная'
-    ADDRESS_TEXT_2 = 'г. Москва, Кремль'
+    ADDRESS_TEXT_2 = ''
 
     # название станции метро «Парк культуры»
     STATION_METRO_TEXT_1 = 'Парк культуры'
@@ -25,7 +25,7 @@ class OrderPageData:
 
     # текст для ввода в поле «Комментарий для курьера»
     COMMENT_COURIER_TEXT_1 = 'Привет.'
-    COMMENT_COURIER_TEXT_2 = 'Пока.'
+    COMMENT_COURIER_TEXT_2 = ''
 
     # текст кнопки «Отменить заказ»
     CANCEL_ORDER_TEXT = 'Отменить заказ'

@@ -13,7 +13,7 @@
 **В модуле tests:**
 <br />
 <br />
-В файле **test_base_page.py**:
+В файле **test_main_page.py**:
 <br />
 Проверка ответов на все важные вопросы при клике на них - TestImportantQuestions.
 <br />
@@ -22,4 +22,4 @@
 <br />
 В файле **test_order_page.py**:
 <br />
-Заказ самоката - TestOrderPage.
+Заказ самоката - TestScooterOrder.
