@@ -3,6 +3,7 @@ import pytest
 from selenium import webdriver
 from data.main_page_data import MainPageData
 from data.order_page_data import OrderPageData
+from pages.main_page import MainPage
 from pages.order_page import OrderPage
 
 
@@ -60,10 +61,12 @@ class TestScooterOrder:
             delivery_date,
             comment_courier_text
     ):
+        # создание объектов
+        main_page = MainPage(self.driver)
         order_page = OrderPage(self.driver)
 
         # поиск кнопки «Заказать» и клик по ней
-        order_page.click_order_button()
+        main_page.click_order_button()
 
         # ввод данных в окне «Для кого самокат»
         order_page.set_personal_info(

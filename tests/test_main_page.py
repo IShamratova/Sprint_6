@@ -138,9 +138,6 @@ class TestPassage:
         # переключаемся на новую вкладку
         main_page.switch_to_new_tab()
 
-        # явное ожидание для загрузки новой страницы dzen
-        main_page.wait_for_loading_url_by_timeout(MainPageData.DZEN_URL, 10)
-
         # проверка URL-адреса на соответствие
         main_page.check_url(MainPageData.DZEN_URL)
 

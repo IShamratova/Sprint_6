@@ -66,5 +66,9 @@ class BasePage:
 
     @allure.step('Проверка адреса страницы')
     def check_url(self, url):
+        # явное ожидание для загрузки новой страницы dzen
+        self.wait_for_loading_url_by_timeout(url, 10)
+
+
         assert self.driver.current_url == url
 

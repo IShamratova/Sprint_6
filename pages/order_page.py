@@ -1,16 +1,10 @@
 import allure
 from data.order_page_data import OrderPageData
 from pages.base_page import BasePage
-from locators.main_page_locators import MainPageLocator
 from locators.order_page_locators import OrderPageLocator
 
 
 class OrderPage(BasePage):
-
-    @allure.step('Нажатие на кнопку "Заказать"')
-    def click_order_button(self):
-        # поиск кнопки «Заказать» и клик по ней
-        self.click_element_by_xpath(MainPageLocator.NAV_BUTTON_ORDER)
 
     @allure.step('Ввод персональных данных')
     def set_personal_info(

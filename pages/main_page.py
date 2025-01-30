@@ -6,6 +6,11 @@ from locators.main_page_locators import MainPageLocator
 
 class MainPage(BasePage):
 
+    @allure.step('Нажатие на кнопку "Заказать"')
+    def click_order_button(self):
+        # поиск кнопки «Заказать» и клик по ней
+        self.click_element_by_xpath(MainPageLocator.NAV_BUTTON_ORDER)
+
     @allure.step('Нажатие на логотип "Самокат"')
     def click_scooter_logo(self):
         # поиск кнопки «Заказать» и клик по ней
